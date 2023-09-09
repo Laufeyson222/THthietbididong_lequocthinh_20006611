@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    'Neuer',
+    'Pavard',
+    'Martinez',
+    
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+for (const [index, player] of game.scored.entries()) {
+  console.log(`Goal ${index + 1}: ${player}`);
+}
+
+let averageOdd = 0;
+for (const odd of Object.values(game.odds)) {
+  averageOdd += odd;
+}
+averageOdd /= Object.values(game.odds).length;
+console.log(`Average Odd: ${averageOdd.toFixed(2)}`);
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamName = game[team] || 'draw'; 
+  console.log(`Odd of victory ${teamName}: ${odd}`);
+}
+
+const scorers = {};
+for (const player of game.scored) {
+  scorers[player] = (scorers[player] || 0) + 1;
+}
+console.log(scorers);
+
+    </script>
+</body>
+</html>
