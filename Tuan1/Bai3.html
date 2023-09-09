@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 96, 108,89
+        //97, 112 ,101
+const dolphinsScores = [97, 112, 101];
+
+        //88, 91,110
+        //109, 95,123
+const koalasScores = [109, 95, 106];
+
+
+const calculateAverage = (scores) => {
+  const sum = scores.reduce((acc, score) => acc + score, 0);
+  return sum / scores.length;
+};
+
+const dolphinsAverage = calculateAverage(dolphinsScores);
+const koalasAverage = calculateAverage(koalasScores);
+
+console.log(`Dolphins' average score: ${dolphinsAverage}`);
+console.log(`Koalas' average score: ${koalasAverage}`);
+
+if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
+  console.log("Dolphins win the competition!");
+} else if (koalasAverage > dolphinsAverage && koalasAverage >= 100) {
+  console.log("Koalas win the competition!");
+} else if (dolphinsAverage === koalasAverage && dolphinsAverage >= 100 && koalasAverage >= 100) {
+  console.log("It's a draw!");
+} else {
+  console.log("No one wins the trophy.");
+}
+
+    </script>
+</body>
+</html>

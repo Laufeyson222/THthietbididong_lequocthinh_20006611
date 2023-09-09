@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Step 1: Store Mark's and John's mass and height in variables
+const markMass = 78; // Mark's mass in kilograms
+const markHeight = 1.69; // Mark's height in meters
+
+const johnMass = 95; // John's mass in kilograms
+const johnHeight = 1.88; // John's height in meters
+
+// Step 2: Calculate both their BMIs using the formula
+const markBMI = markMass / (markHeight * markHeight);
+const johnBMI = johnMass / (johnHeight * johnHeight);
+
+// Step 3: Create a Boolean variable 'markHigherBMI'
+const markHigherBMI = markBMI > johnBMI;
+
+// Step 4: Print the result with a nice message using template literals
+if (markHigherBMI) {
+  console.log(`Mark's BMI (${markBMI.toFixed(1)}) is higher than John's (${johnBMI.toFixed(1)})!`);
+} else {
+  console.log(`John's BMI (${johnBMI.toFixed(1)}) is higher than Mark's (${markBMI.toFixed(1)})!`);
+}
+
+
+    </script>
+</body>
+</html>
