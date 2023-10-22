@@ -2,7 +2,6 @@ import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import React, { useState } from 'react'
 
 
-
 export default function Screen2({navigation, route}) {
  const [image, setImage] = useState(require('../assets/vs_blue.png'));
   return (
