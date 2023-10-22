@@ -29,10 +29,8 @@ export default function Screen2({navigation, route}) {
                 ></Pressable>
             </View>
             <Pressable style={styles.button}
-                onPress={() => navigation.navigate(
-                    {
-                        name: 'Screen1', params: {image: image}
-                    })}
+                onPress={() => navigation.navigate('Screen2')}
+                    
             >Xong</Pressable>
         </View>
     </View>
